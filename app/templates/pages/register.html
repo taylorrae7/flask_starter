@@ -1,0 +1,22 @@
+{% extends 'layouts/form.html' %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+  <form method="post" class="form">
+
+      <h3 class="form-heading">Register <a href="/" title="Back to homepage"><i class="fa fa-home pull-right"></i></a></h3>
+
+      {{ form.csrf_token }}
+      {{ form.firstname(class = 'form-control', placeholder = form.firstname.label.text, required = true) }}
+      {{ form.lastname(class = 'form-control ', placeholder = form.lastname.label.text, required = true) }}
+      {{ form.email(class = 'form-control', placeholder = form.email.label.text, required = true) }}
+      {{ form.password(class = 'form-control', placeholder = form.password.label.text, required = true) }}
+      {{ form.confirm(class = 'form-control last-input', placeholder = form.confirm.label.text, required = true) }}
+
+      <p>Already registered? <a href="/login">Login</a> </p>
+      <input type="submit" value="Register" class="btn btn-primary btn-lg btn-block">
+
+  </form>
+{% endblock %}

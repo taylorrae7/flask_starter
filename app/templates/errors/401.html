@@ -1,0 +1,16 @@
+{% extends "layouts/_base.html" %}
+{% block title %}
+    Unauthorized
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="text-center">
+        <h1>Unauthorized</h1>
+        <p>You are not authorized to see this page. Please <a href="{{ url_for('auth.login')}}">log in</a> or
+            <a href="{{ url_for('auth.register') }}">create a new account</a>.</p>
+
+        <p>You can navigate <a href="{{ url_for('home.home') }}">home</a> instead.</p>
+    </div>
+</div>
+{% endblock %}

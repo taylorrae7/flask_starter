@@ -1,0 +1,20 @@
+{% extends 'layouts/form.html' %}
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+  <form method="post" class="form">
+
+      <h3 class="form-heading">Login <a href="/" title="Back to homepage"><i class="fa fa-home pull-right"></i></a></h3>
+
+      {{ form.csrf_token }}
+      {{ form.email(class = 'form-control', placeholder = form.email.label.text, required = true) }}
+      {{ form.password(class = 'form-control', placeholder = form.password.label.text, required = true) }}
+
+      <p class="pull-left"><a href="/forgot">Forgot Password?</a></p>
+      <p class="pull-right"><a href="/register">Register</a></p>
+      <input type="submit" value="Submit" class="btn btn-primary btn-lg btn-block">
+
+  </form>
+{% endblock %}
