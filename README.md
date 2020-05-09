@@ -1,6 +1,6 @@
 ## Flask Start-Up! 
 
-Starter App, powered by Real Python
+Starter app for a flask application
 
 Key Features/Packages being used: 
 * Modular Flask application architecture using [Application Factories][app-factory] and [Blueprints][blueprints]
